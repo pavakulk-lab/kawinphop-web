@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Job-application</title>
+</head>
+<body>
+    <form action="/register" method="POST">
+    <h1>รับสมัครงาน</h1>
+    <fieldset>
+        <legend>สมัครสมาชิก</legend>
+        
+        <!-- ชื่อผู้ใช้ -->
+        <div class="form-group">
+            <label for="username">ชื่อผู้ใช้ *</label>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   pattern="[a-z0-9_]{4,16}"
+                   title="4-16 ตัวอักษร (a-z, 0-9, _)"
+                   required>
+        </div>
+        
+        <!-- อีเมล -->
+        <div class="form-group">
+            <label for="email">อีเมล *</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="example@email.com"
+                   required>
+        </div>
+        
+        <!-- รหัสผ่าน -->
+        <div class="form-group">
+            <label for="password">รหัสผ่าน *</label>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   minlength="8"
+                   pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
+                   title="ต้องมีตัวอักษรและตัวเลข อย่างน้อย 8 ตัว"
+                   required>
+        </div>
+        <!-- เบอร์โทรศัพท์ -->
+        <div class="form-group">
+            <label for="tel">เบอร์โทรศัพท์ *</label>
+            <input type="tel"
+                   id="tel"
+                   name="tel"
+                   minlength="10"
+                   pattern="(?=.*\d)"
+                   title="เบอร์โทรศัพท์ตัวเลข 10 ตัว"
+                   
+        </div>
+        
+        <!-- วันเกิด -->
+        <div class="form-group">
+            <label for="birthdate">วันเกิด</label>
+            <input type="date"
+                   id="birthdate"
+                   name="birthdate"
+                   max="2010-01-01">
+        </div>
+        
+        <!-- ยอมรับเงื่อนไข -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="agree" required>
+                ยอมรับเงื่อนไขการใช้งาน *
+            </label>
+        </div>
+        
+    </fieldset>
+<fieldset>
+    <legend>เกี่ยวกับงาน</legend>
+    <!--ตำแหน่งที่สนใจ -->
+    <div class="form-group">
+        <label for="job">ตำแหน่งที่สนใจ:</label>
+<select id="job" name="job">
+    <optgroup label="frontend">
+        <option value="frontend developer">frontend developer</option>
+        <option value="ui developer / web designer">i developer / web designer</option>
+    </optgroup>
+    <optgroup label="backend">
+        <option value="backend developer">backend developer</option>
+        <option value="api developer / Server-side Developer">api developer / Server-side Developer</option>
+    </optgroup>
+</select>
+    </div>
+    <!-- ประสบการณ์ทำงาน -->
+    <div class="form-group">
+    <label> ประสบการณ์ทำงาน (ปี)</label>
+    <input type="number"  id="exp" name="expirience" min="0" step="1" required>
+    </div>
+
+    <!-- ทักษะ -->
+    <div class="form-group">
+        <p>ทักษะที่มี:</p>
+<label>
+    <input type="checkbox" name="skills" value="html"> HTML
+</label>
+<label>
+    <input type="checkbox" name="skills" value="css"> CSS
+</label>
+<label>
+    <input type="checkbox" name="skills" value="js"> JavaScript
+</label>
+<label>
+    <input type="checkbox" name="skills" value="java"> java
+</label>
+<label>
+    <input type="checkbox" name="skills" value="php"> php
+</label>
+<label>
+    <input type="checkbox" name="skills" value="python"> python
+</label>
+
+    <!-- แนะนำตัว -->
+    <div class="form-group">
+    <p>แนะนำตัว :</p>
+    <textarea id="message"
+          name="message"
+          rows="5"
+          cols="40"
+          placeholder="พิมพ์ข้อความของคุณที่นี่..."
+          maxlength="500"></textarea>
+    </div>
+
+    <!-- resume -->
+    <div class="form-group">
+    <p> ส่ง resume ที่นี่ :</p>
+    <input type="file" name="resume" accept=".pdf" required><br>
+    </div>
+    </fieldset>
+</form>
+<p>
+    <small>&copy; 2026 kawinphop . Made with &hearts;</small>
+</p>
+</body>
+</html>
