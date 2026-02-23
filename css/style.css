@@ -1,0 +1,46 @@
+body {
+    background-color: #7d5b94;
+}
+.logo {
+    color: #166534;
+    font-size: 2rem;
+}
+.price {
+    color: #16a34a;
+    font-weight: bold;
+}
+.bestseller {
+    background-color: #fef9c3; /* เหลืองอ่อน */
+    color: #854d0e;            /* น้ำตาลทอง */
+}
+
+/* Badge NEW — สีเขียวอ่อน */
+.new {
+    background-color: #dcfce7; /* เขียวอ่อน */
+    color: #166534;            /* เขียวเข้ม */
+}
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        #423d88,         /* เขียวเข้ม */
+        #3a8053          /* เขียวสด */
+    );
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.site-header {
+    background-color: #570eb8;
+    color: rgb(126, 72, 143);
+    padding: 1rem 2rem;
+}
+#menu {
+    background-color: #555691;
+    padding: 3rem 2rem;
+}
+.site-footer {
+    background-color: #437e5b;
+    color: rgba(66, 1, 150, 0.8);   /* ขาว 80% */
+    text-align: center;
+    padding: 2rem;
+}
